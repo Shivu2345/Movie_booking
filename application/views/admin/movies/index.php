@@ -1,4 +1,63 @@
-  
+  <style type="text/css" media="screen">
+   
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 48px;
+        height: 25px;
+    }
+    .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked + .slider {
+        background-color: #d3af37;
+    }
+
+    input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(22px);
+        -ms-transform: translateX(22px);
+        transform: translateX(22px);
+    }
+
+/* Rounded sliders */
+    .slider.round {
+        border-radius: 30px;
+    }
+
+    .slider.round:before {
+        border-radius: 45%;
+    }
+</style>
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="breadcome-list">
                                 <div class="row">
@@ -16,14 +75,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                 <!--    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                        <div class="breadcomb-report">
-                                            <button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="icon nalika-download"></i></button>
-                                        </div>
-                                    </div> -->
                                 </div>
                             </div>
-                        </div>
+                 </div>
   <div class="product-status mg-b-30">
             <div class="container-fluid">
                 <div class="row">
@@ -35,107 +89,39 @@
                             </div>
                             <table>
                                 <tr>
-                                    <th>Image</th>
-                                    <th>Title</th>
-                                    <th>Category</th>
-                                    <th>Genres</th>
-                                    <th>Duration</th>
-                                    <th>Release Date</th>
-                                    <th>Information</th>
-                                    <th>director</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
+                                    <th style="width:10%; text-align:center;">Image</th>
+                                    <th style="width: 20%;">Title</th>
+                                    <th style="width: 20%;">Duration</th>
+                                    <th style="width: 20%;">Release Date</th>
+                                    <th style="width: 20%;">Status</th>
+                                    <th style="width: 20%; text-align: center;">Action</th>
                                 </tr>
+<?php  
+    foreach ($movies as $movie)
+    {
+?>    
                                 <tr>
-                                    <td><img src="img/new-product/5-small.jpg" alt="" /></td>
-                                    <td>Product Title 1</td>
+                                    <td style="text-align:center;"><img src="<?php echo base_url(); ?>assets/uploads/movies/<?php echo $movie['image']; ?>" alt="No Image"></td>
+                                    <td><?php echo $movie['title']; ?></td>
+                                    <td><?php echo $movie['duration']." mins"; ?></td>
+                                    <td><?php echo $movie['release_date']; ?></td>
                                     <td>
-                                        <button class="pd-setting">Active</button>
-                                    </td>
-                                    <td>50</td>
-                                    <td>$750</td>
-                                    <td>Out Of Stock</td>
-                                    <td>$15</td>
+                    <label class="switch"> 
+                        <input type="checkbox" name="status">
+                        <span class="slider round"></span>
+                    </label></td>
                                     <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/new-product/6-small.jpg" alt="" /></td>
-                                    <td>Product Title 2</td>
-                                    <td>
-                                        <button class="ps-setting">Paused</button>
-                                    </td>
-                                    <td>60</td>
-                                    <td>$1020</td>
-                                    <td>In Stock</td>
-                                    <td>$17</td>
-                                    <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                        <span><a href="<?php echo base_url(); ?>admin/movies/detail/<?php echo $movie['id']; ?>" class="pd-setting-ed" data-toggle="tooltip" title="View" style="color: white;"><i class="fa fa-eye fa-lg" aria-hidden="true"></i></span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                        <span ><a href="<?php echo base_url(); ?>admin/movies/edit/<?php echo $movie['id']; ?>" class="pd-setting-ed" data-toggle="tooltip" title="Edit" style="color: white;"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                        <span ><a href="<?php echo base_url(); ?>admin/movies/delete/<?php echo $movie['id']; ?>" class="pd-setting-ed" data-toggle="tooltip" title="Delete" style="color: white;"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></span></a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td><img src="img/new-product/7-small.jpg" alt="" /></td>
-                                    <td>Product Title 3</td>
-                                    <td>
-                                        <button class="ds-setting">Disabled</button>
-                                    </td>
-                                    <td>70</td>
-                                    <td>$1050</td>
-                                    <td>Low Stock</td>
-                                    <td>$15</td>
-                                    <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/new-product/5-small.jpg" alt="" /></td>
-                                    <td>Product Title 4</td>
-                                    <td>
-                                        <button class="pd-setting">Active</button>
-                                    </td>
-                                    <td>120</td>
-                                    <td>$1440</td>
-                                    <td>In Stock</td>
-                                    <td>$12</td>
-                                    <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/new-product/6-small.jpg" alt="" /></td>
-                                    <td>Product Title 5</td>
-                                    <td>
-                                        <button class="pd-setting">Active</button>
-                                    </td>
-                                    <td>30</td>
-                                    <td>$540</td>
-                                    <td>Out Of Stock</td>
-                                    <td>$18</td>
-                                    <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/new-product/7-small.jpg" alt="" /></td>
-                                    <td>Product Title 6</td>
-                                    <td>
-                                        <button class="ps-setting">Paused</button>
-                                    </td>
-                                    <td>400</td>
-                                    <td>$4000</td>
-                                    <td>In Stock</td>
-                                    <td>$10</td>
-                                    <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
+<?php  
+    }
+?>
+
                             </table>
                             <div class="custom-pagination">
                                 <ul class="pagination">
@@ -151,3 +137,16 @@
                 </div>
             </div>
         </div>
+
+<script>
+    $(function(){
+           <?php   
+                if($msg = $this->session->flashdata('msg'))
+                {
+            ?>
+                    toastr.success("<?php echo $msg; ?>");
+            <?php
+                }
+           ?>
+    });
+</script>

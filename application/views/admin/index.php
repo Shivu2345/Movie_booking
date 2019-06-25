@@ -62,6 +62,19 @@
 <!-- modernizr JS
 ============================================ -->
 <script src="<?php echo base_url('assets/'); ?>js/vendor/modernizr-2.8.3.min.js"></script>
+
+<!-- round Button -->
+<link href="<?php echo base_url('assets/')?>css/core.css" rel="stylesheet" type="text/css">
+<link href="<?php echo base_url('assets/')?>css/components.css" rel="stylesheet" type="text/css">
+<!-- /round Button -->
+
+<!-- Notification -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<!-- /Notification -->
+
+
 </head>
 
 <body>
@@ -72,8 +85,8 @@
 <div class="left-sidebar-pro">
 <nav id="sidebar" class="">
 <div class="sidebar-header">
-<a href="index.html"><img class="main-logo" src="<?php echo base_url('assets/admin/'); ?>img/Movie-Tickets.png" height="100" width="100" alt="" /></a>
-<strong><img src="<?php echo base_url('assets/admin/'); ?>img/logo/logosn.png" alt="" /></strong>
+<a href="index.html"><img class="main-logo" src="<?php echo base_url('assets/'); ?>img/Movie-Tickets.png" height="100" width="100" alt="" /></a>
+<strong><img src="<?php echo base_url('assets/'); ?>img/logo/logosn.png" alt="" /></strong>
 </div>
 <div class="nalika-profile">
 <div class="profile-dtl">
@@ -105,7 +118,7 @@
 <div class="row">
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <div class="logo-pro">
-<a href="index.html"><img class="main-logo" src="<?php echo base_url('assets/admin/');?>img/logo/logo.png" alt="" /></a>
+<a href="index.html"><img class="main-logo" src="<?php echo base_url('assets/');?>img/logo/logo.png" alt="" /></a>
 </div>
 </div>
 </div>
@@ -213,6 +226,10 @@
 <!-- main JS
 ============================================ -->
 <script src="<?php echo base_url('assets/'); ?>js/main.js"></script>
+
+<!-- Validation -->
+<script src="<?php echo base_url('assets/'); ?>js/jquery.validate.min.js"></script>
+<!-- /Validation -->
 </body>
 
 </html>
