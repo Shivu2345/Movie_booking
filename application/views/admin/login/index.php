@@ -9,57 +9,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
 		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/admin/');?>img/Movie-Tickets.png">
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('/');?>img/Movie-Tickets.png">
     
     <!-- Google Fonts
 		============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
     <!-- Bootstrap CSS
 		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/bootstrap.min.css">
     <!-- Bootstrap CSS
 		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/font-awesome.min.css">
     <!-- owl.carousel CSS
 		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/owl.carousel.css">
-    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/owl.theme.css">
-    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/owl.transitions.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/owl.carousel.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/owl.theme.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/owl.transitions.css">
     <!-- animate CSS
 		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/animate.css">
     <!-- normalize CSS
 		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/normalize.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/normalize.css">
     <!-- main CSS
 		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/main.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/main.css">
     <!-- morrisjs CSS
 		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/morrisjs/morris.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/morrisjs/morris.css">
     <!-- mCustomScrollbar CSS
 		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/scrollbar/jquery.mCustomScrollbar.min.css">
     <!-- metisMenu CSS
 		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/metisMenu/metisMenu.min.css">
-    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/metisMenu/metisMenu-vertical.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/metisMenu/metisMenu-vertical.css">
     <!-- calendar CSS
 		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/calendar/fullcalendar.min.css">
-    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/calendar/fullcalendar.print.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/calendar/fullcalendar.print.min.css">
     <!-- forms CSS
 		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/form/all-type-forms.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/form/all-type-forms.css">
     <!-- style CSS
 		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>style.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>style.css">
     <!-- responsive CSS
 		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/responsive.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/responsive.css">
     <!-- modernizr JS
 		============================================ -->
-    <script src="<?php echo base_url('assets/admin/'); ?>js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/vendor/modernizr-2.8.3.min.js"></script>
 
   <style type="text/css" media="screen">
         label.error
@@ -107,50 +107,50 @@
 
     <!-- jquery
 		============================================ -->
-    <script src="<?php echo base_url('assets/admin/'); ?>js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="<?php echo base_url('assets/admin/'); ?>js/jquery.validate.min.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/jquery.validate.min.js"></script>
     <!-- bootstrap JS
 		============================================ -->
-    <script src="<?php echo base_url('assets/admin/'); ?>js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/bootstrap.min.js"></script>
     <!-- wow JS
 		============================================ -->
-    <script src="<?php echo base_url('assets/admin/'); ?>js/wow.min.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/wow.min.js"></script>
     <!-- price-slider JS
 		============================================ -->
-    <script src="<?php echo base_url('assets/admin/'); ?>js/jquery-price-slider.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/jquery-price-slider.js"></script>
     <!-- meanmenu JS
 		============================================ -->
-    <script src="<?php echo base_url('assets/admin/'); ?>js/jquery.meanmenu.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/jquery.meanmenu.js"></script>
     <!-- owl.carousel JS
 		============================================ -->
-    <script src="<?php echo base_url('assets/admin/'); ?>js/owl.carousel.min.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/owl.carousel.min.js"></script>
     <!-- sticky JS
 		============================================ -->
-    <script src="<?php echo base_url('assets/admin/'); ?>js/jquery.sticky.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/jquery.sticky.js"></script>
     <!-- scrollUp JS
 		============================================ -->
-    <script src="<?php echo base_url('assets/admin/'); ?>js/jquery.scrollUp.min.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/jquery.scrollUp.min.js"></script>
     <!-- mCustomScrollbar JS
 		============================================ -->
-    <script src="<?php echo base_url('assets/admin/'); ?>js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="<?php echo base_url('assets/admin/'); ?>js/scrollbar/mCustomScrollbar-active.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/scrollbar/mCustomScrollbar-active.js"></script>
     <!-- metisMenu JS
 		============================================ -->
-    <script src="<?php echo base_url('assets/admin/'); ?>js/metisMenu/metisMenu.min.js"></script>
-    <script src="<?php echo base_url('assets/admin/'); ?>js/metisMenu/metisMenu-active.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/metisMenu/metisMenu.min.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/metisMenu/metisMenu-active.js"></script>
     <!-- tab JS
 		============================================ -->
-    <script src="<?php echo base_url('assets/admin/'); ?>js/tab.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/tab.js"></script>
     <!-- icheck JS
 		============================================ -->
-    <script src="<?php echo base_url('assets/admin/'); ?>js/icheck/icheck.min.js"></script>
-    <script src="<?php echo base_url('assets/admin/'); ?>js/icheck/icheck-active.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/icheck/icheck.min.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/icheck/icheck-active.js"></script>
     <!-- plugins JS
 		============================================ -->
-    <script src="<?php echo base_url('assets/admin/'); ?>js/plugins.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/plugins.js"></script>
     <!-- main JS
 		============================================ -->
-    <script src="<?php echo base_url('assets/admin/'); ?>js/main.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/main.js"></script>
 </body>
 
 </html>
