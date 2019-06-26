@@ -1,3 +1,4 @@
+
 <style type="text/css" media="screen">
    
    #info::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -125,27 +126,27 @@
                 <input type="text" class="form-control" name="title" placeholder="Movie Title" data-toggle="tooltip" title="Movie Title" data-placement="bottom" id="title">
             </div>
 
-            <div class="input-group mg-b-pro-edt">
+            <div class="input-group">
                 <span class="input-group-addon"><i class="icon nalika-like" aria-hidden="true"></i></span>
-                <select name="category" class="form-control pro-edt-select form-control-primary" data-toggle="tooltip" title="Category" data-placement="bottom">
-                    <option value="opt1">Select One Category Only</option>
-                    <option value="hollywood">Hollywood</option>
+                <select name="category" class="form-control pro-edt-select form-control-primary" data-toggle="tooltip" data-placement="bottom" title="Select Movie Category">
+                    <option value="">Select Category</option>
                     <option value="bollywood">Bollywood</option>
+                    <option value="hollywood">Hollywood</option>
                     <option value="tollywood">Tollywood</option>
                 </select>
             </div>
-
-            <div class="input-group mg-b-pro-edt">
+            <br>                                  
+            <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-star-o" aria-hidden="true"></i></span>
-                <select name="genres" class="form-control pro-edt-select form-control-primary" data-toggle="tooltip" title="Genre" data-placement="bottom" >
-                    <option value="opt1">Select One Genre Only</option>
-                    <option value="horror">Horror</option>
-                    <option value="romantic">Romantic</option>
-                    <option value="comedy">Comedy</option>
+                <select name="genres" class="form-control pro-edt-select form-control-primary" data-toggle="tooltip" data-placement="bottom" title="Select Movie Geners">
+                    <option value="">Select Genres</option>
                     <option value="action">Action</option>
                     <option value="drama">Drama</option>
-                    <option value="mystery">Mystery</option>
-                </select>
+                    <option value="biography">Biography</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="horror">Horror</option>
+                    <option value="romantic">Romantic</option>
+            </select>
             </div>
 
         </div>
@@ -155,7 +156,8 @@
 
             <div class="input-group mg-b-pro-edt">
                 <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
-                <input type="text" class="form-control" name="duration" placeholder="Movie Duration" data-toggle="tooltip" title="Movie Duration" data-placement="bottom" id="duration">
+                <input type="text" class="form-control duration" name="duration" placeholder="Movie Duration" data-toggle="tooltip" title="Movie Duration" data-placement="bottom" id="duration">
+                <span class="error" style="color: Red; display: none">* Input digits (0 - 9)</span>
             </div>
 
             <div class="input-group mg-b-pro-edt">
@@ -214,6 +216,12 @@
                 title: {
                   required: true
                 },
+                category: {
+                    required: true
+                },
+                genres: {
+                    required: true
+                },
                 duration: {
                   required: true
                 },
@@ -225,12 +233,6 @@
                 },
                 director: {
                     required: true
-                },
-                category: {
-                    required: true
-                },
-                genres: {
-                    required: true
                 }
             },
             messages: {
@@ -241,6 +243,12 @@
                 },
                 title: {
                     required: 'Please Enter title of movie'
+                },
+                category: {
+                    required: 'Please select Category of movie'
+                },
+                genres: {
+                    required: 'Please select genres of movie'
                 },
                 duration: {
                     required: 'Please Enter Duration of movie'
@@ -254,14 +262,27 @@
                 director: {
                     required: 'Please Enter director of movie'
                 },
-                category: {
-                    required: 'Please select Category of movie'
-                },
-                genres: {
-                    required: 'Please select genres of movie'
-                }
             }
         });
     });
+/* /For validation*/
+
+/* Validation for only number*/
+    var specialKeys = new Array();
+    specialKeys.push(8); //Backspace
+    $(function () {
+        $(".duration").bind("keypress", function (e) {
+            var keyCode = e.which ? e.which : e.keyCode
+            var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);
+            $(".error").css("display", ret ? "none" : "inline");
+            return ret;
+        });
+        $(".duration").bind("paste", function (e) {
+            return false;
+        });
+        $(".duration").bind("drop", function (e) {
+            return false;
+        });
+    });
+/* / Validation for only number*/
 </script>
-<!-- /For validation -->

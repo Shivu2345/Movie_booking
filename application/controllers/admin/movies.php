@@ -20,8 +20,43 @@ class Movies extends CI_Controller {
  */
 	public function index()
 	{
-		$data['movies'] = $this->m_model->get_all();
+		//$data['movies'] = $this->m_model->get_all();
+
+		//Pagination
+
+		$config                    = array();
+		$config["base_url"]        = base_url().'admin/movies';
+		$config['full_tag_open']   = "<ul class='pagination'>";
+		$config['full_tag_close']  = '</ul>';
+		$config['num_tag_open']    = '<li>';
+		$config['num_tag_close']   = '</li>';
+		$config['cur_tag_open']    = '<li class="active"><a href="#">';
+		$config['cur_tag_close']   = '</a></li>';
+		$config['prev_tag_open']   = '<li>';
+		$config['prev_tag_close']  = '</li>';
+		$config['first_tag_open']  = '<li>';
+		$config['first_tag_close'] = '</li>';
+		$config['last_tag_open']   = '<li>';
+		$config['last_tag_close']  = '</li>';
+		$config['prev_link']       = '<i class="fa fa-long-arrow-left" style="height:2.9%;"></i>';
+		$config['prev_tag_open']   = '<li>';
+		$config['prev_tag_close']  = '</li>';
+		$config['next_link']       = '<i class="fa fa-long-arrow-right" style="height:2.9%;"></i>';
+		$config['next_tag_open']   = '<li>';
+		$config['next_tag_close']  = '</li>';
+		$config["total_rows"]      = $this->m_model->count_by(array('deleted' => '0'));
+		$config["per_page"]        = 3;
+		$config["uri_segment"]     = 3;
+		$this->pagination->initialize($config);
+		$page          = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+		$data["links"] = $this->pagination->create_links();
+
+		$data['movies'] = $this->m_model->get_movies($config["per_page"], $page);
+
+
 		$data['contents'] = $this->load->view('admin/movies/index',$data,TRUE);
+		// var_dump($data['contents']);
+		// die();
 		$this->load->view('admin/index',$data);
 	}
 
